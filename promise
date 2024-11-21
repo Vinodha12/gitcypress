@@ -1,0 +1,98 @@
+// function hello(){
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             resolve("Hello")
+//         },1500)
+
+//     })
+
+    
+// }
+// function nexttask(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             resolve("This is task 2")
+//         },1500)
+//     })
+// }
+// hello().then(value=>{console.log(value);return nexttask()
+// }).then(value=>{console.log(value);return console.log("All task completed");
+
+// })
+//Reject
+// function hi(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             const saidhi=true
+//             if(saidhi){
+//                 resolve("Hi")
+//             }
+//             else{
+//                 reject("Hi didn't say Hi")
+//             }
+//         },1500)
+//     })
+// }
+// function task2hi(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             const taskcomplete=false
+//             if(taskcomplete){
+//                 resolve("He completed task2")
+//             }
+//             else{
+//                 reject("He didn't complete task2")
+//             }
+//         },1500)
+//     })
+// }
+// hi().then(value=>{console.log(value);return task2hi()
+// }).then(value=>{console.log(value);return console.log("All task completed");
+// }).catch(error=>{console.log(error);
+// });
+//Parameter pass pannrathu
+function task1(x){
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            const task1=x;
+            if(task1){
+                resolve("Task1 complete")
+            }
+            else{
+                reject("Task1 is incomplete")
+            }
+        },1500)
+    })
+}
+function task2(y){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const task2=y
+            if(task2){
+                resolve("Task2 is completed")
+            }
+            else{
+                reject("Task2 is incomplete")
+            }
+        },2000)
+    })
+}
+function task3(z){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const task3=z
+            if(task3){
+                resolve("Task3 is complete")
+            }
+            else{
+                reject("Task3 is incomplete")
+            }
+        })
+    })
+}
+task1(true).then(value=>{console.log(value);return task2(true)
+}).then(value=>{console.log(value);return task3(false)
+}).then (value=>{console.log(value);return console.log("All task completed");
+}).catch(error=>{console.log(error);
+});
+

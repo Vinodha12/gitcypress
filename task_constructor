@@ -1,0 +1,17 @@
+function Student(name,age,std,bloodgroup){
+    this.studentname = name
+    this.studentage = age
+    this.studentstd = std
+    this.studentbloodgp= bloodgroup
+
+}
+let details = new Student("Vijay",10,6,"AB-")
+let details1 = new Student("Ajay",11,7,"A+")
+let details2 = new Student("Jai",12,8,"O+")
+
+console.log(details,(details1));
+// console.log(details1);
+// console.log(details2)
+
+
+

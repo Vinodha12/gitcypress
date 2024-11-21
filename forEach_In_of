@@ -1,0 +1,37 @@
+//For Each
+//For each used for to itreate the array
+const arr=["hari","gopi","gopal","lakshman"]
+arr.forEach((value,index,array)=>{
+    console.log(value,index,array);
+})
+
+arr.forEach((index,array)=>{
+    console.log(index,array);
+})
+//For in
+//To itreate object
+var obj={
+    name:"lakshman",
+    age:25
+}
+for(var x in obj){
+    console.log(x,":",obj[x]);
+    
+}
+//For Of
+//To iterate String
+var str="lakshman"
+for(var y of str){
+    console.log(y);
+    
+}
+//GEC- Gobal Execution Context
+function f1(){
+    console.log("Lakshman");
+    
+}
+function f2(){
+    console.log("function 2");
+    f1()
+}
+f2()

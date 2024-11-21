@@ -1,0 +1,22 @@
+var arr=[3,9,25,7,5,54]
+arr.sort((a,b)=>a-b)
+console.log("The minimum value of given array is:" +arr[1]);
+arr.sort((a,b)=>b-a)
+console.log("The maximum number of given array is:" +arr[1]);
+
+
+var ar=[2,5,36,47,85,1]
+var maxi=[-Infinity]
+var mini=[Infinity]
+for(var i=0; i<ar.length;i++){
+    if(ar[i]>maxi){
+        maxi=ar[i]
+            }
+     else if(arr[i]<mini)
+     {
+        mini=ar[i]
+     }        
+}
+console.log(maxi);
+console.log(mini);
+

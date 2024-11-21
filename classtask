@@ -1,0 +1,63 @@
+//function1
+//4000sec
+    //x,y
+    //addz=x+y
+    //z>50
+    //z....100 seperate odd seperated by even
+    //z<50
+    //z...0 seperate odd seperated by even
+
+//function 2
+//200
+    //y- prameter-string
+    //reverse
+    //print
+    var even=[]
+    var odd=[]
+    var even1=[]
+    var odd1=[]
+    var str=""
+function funtion1(x,y,callback){
+    setTimeout(()=>{
+    var z=x+y
+    if(z>50){
+        for(var i=z;i<=100;i++){
+            if(i%2==0){
+                even+=i+","
+            }
+            else {
+                odd+=i+","
+            }
+        }
+    console.log("The even numbers are: "+even);
+    console.log("The odd numbers are: "+odd);
+    
+    
+    }
+   if(z<50){
+    for(var j=z;j>=0;j--){
+        if(j%2==0){
+            even1+=j+","
+        }
+    else{
+        odd1+=j+","
+    }
+    }
+   }
+   console.log("The even number are: "+even1);
+   console.log("The odd number are: "+odd1);
+ callback()},4000)
+}    
+function function2(a,callback){
+    setTimeout(()=>{
+    for(var k=a.length-1; k>=0;k--){
+        str+=a[k]
+    }
+    console.log(str);
+    callback(),2000})
+    }
+
+    funtion1(10,13,()=>{
+        function2("Lakshman",()=>{console.log("All Task Completed");
+        })
+    })

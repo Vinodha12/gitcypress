@@ -1,0 +1,112 @@
+//Array Methods
+    //push
+       //Add a value or data at the end of the array
+       var arr=["lakshman","gopi","gopal"]
+        arr.push("krishna")
+        console.log(arr);
+    //pop
+        //Remove the last entry or date of an array
+        
+        arr.pop()
+        console.log(arr);
+    
+    //split
+        // let spl="good morning"
+        // let splited = spl.split(" ")
+        // console.log(splited);
+
+    //UnShift
+        //To add the value or data in the front of an array
+            var t=["jan","feb","march","apr"]
+                t.unshift("dec")
+                    console.log(t);
+    //Shift
+        //To remove the first entry or data from the array
+            t.shift()
+            console.log(t);
+    //concat
+        let fruit=["apple","orange","watermelon"]                            
+        let morefruit=["kiwi","grapes"]
+        let veg=["gobi"]
+        let cover=fruit.concat(morefruit,veg)
+        console.log(cover);
+    //sort
+        // Ascending order
+        var ae=[2,5,9,7,3]
+        ae.sort((a,b)=>a-b)
+        //negative no interchange
+        //positive value will interchange
+        console.log(ae);
+            
+        //Decending order
+        var ae=[2,5,9,7,3]
+        ae.sort((a,b)=>b-a)
+        //negative no interchange
+        //positive value will interchange
+        console.log(ae);
+     //sort using string
+        var dd=["lakshman","gopi","gopal","Hello"] 
+            dd.sort()
+            console.log(dd);
+           //Why Hello is 1st print means Ascii value based on it will print capital letter 1st.
+           
+     //Split
+        let sp="Hello World"
+        let splits = sp.split("o")
+        console.log(splits);
+        let split=sp.split("")
+        console.log(split);
+     //Join
+        let rr = split.join("")
+        console.log(rr);
+        
+        var sp1="World Hello"
+        var p=sp1.split("o")
+        console.log(p);
+ 
+    //splice
+        var dd=["jan","march","april","may","july"]
+            dd.splice(1,0,"feb")
+            //1-Index value
+            //0-to insert
+            //feb- value to be insert
+            console.log(dd);
+            dd.splice(1,1,"march")
+            //1-index
+            //1-to replace
+            //march-value to be replaced
+            console.log(dd);
+            
+     //copywithin
+        //Copy within the given Value
+        var arr=["lakshman0","gopi1","gopal2","jolly3","hello4","hi5"]
+        // [arr[1],arr[2]]=[arr[2],arr[1]]
+        arr.copyWithin(1,2,5)
+        //1-target no
+        //2-start(from where to start copy)
+        //5-end(to which index before it should copy + 1)
+        console.log(arr);
+     //Object destructring
+        var obj=[{
+            name:"lakshman",
+            age:"25",
+            depart:"cse",
+            address:{
+                doorno:121,
+                street: "Kamaraj Street",
+                city:"Chennai"
+            },
+        },
+        {name:"gopi",
+            age:28,
+            depart:"it"
+
+
+        }]                 
+        console.log(obj);
+        console.log(obj.address.street);
+        
+        
+        
+        
+        

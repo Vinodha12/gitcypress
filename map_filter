@@ -1,0 +1,53 @@
+//Map
+//Accepts a callback and apply that function to each element of an array then return a new array
+var arr=[2,5,3,6,8]
+    const squaredarr=arr.map(suqare)
+    console.log(squaredarr);
+    const cubedarr=arr.map(cube)
+    console.log(cubedarr);
+    
+function suqare(element){
+    return element**2
+}
+function cube(element){
+    return element**3
+}
+
+    const dates=["2024-12-1","2020-08-27","2015-03-30"]
+    //1/12/2024,27/08/2020,30/03/2015
+    function formatdate(element){
+        const parts = element.split("-")
+        return`${parts[2]}/${parts[1]}/${parts[0]}`
+    }
+    const fordate = dates.map(formatdate)
+    console.log(fordate);
+    
+//UpperCase
+    const name = ["lakshman","gopi","gopal"]
+        function upcase(element){
+            return element.toUpperCase()
+        }
+        const studentsname = name.map(upcase)
+        console.log(studentsname);
+        
+//LowerCase
+        function lowcase(element){
+            return element.toLowerCase()
+        }
+    const studentslow = studentsname.map(lowcase)
+    console.log(studentslow);
+//Filter
+//Create a new array by filtering out elements
+    var num = [1,2,3,4,5,6,7]
+    function even(element){
+        return element%2==0
+    }      
+    function odd(element){
+        return element%2!=0
+    }    
+    const evennum = num.filter(even)
+    console.log(evennum);
+    const oddnum = num.filter(odd)
+    console.log(oddnum);
+    
+    

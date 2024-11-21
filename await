@@ -1,0 +1,42 @@
+function task1(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const task1finish=true
+            if(task1finish){
+                resolve("Task1 is complete")
+            }
+            else{
+                reject("Task1 is incomplete")
+            }
+        },1500)
+    })
+}
+function task2(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const task2finish=false
+            if(task2finish){
+                resolve("Task2 is complete")
+            }
+            else{
+                reject("Task2 is incomplete")
+            }
+        })
+    })
+}
+
+
+async function result() {
+    try {
+        const task1result = await task1()
+        console.log(task1result);
+        const task2result = await task2()
+        console.log(task2result);
+        
+        
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+result()
